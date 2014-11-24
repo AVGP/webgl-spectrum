@@ -1,0 +1,21 @@
+{
+  "name": "webgl-spectrum",
+  "version": "1.0.0",
+  "description": "3D spectrum analyser using Three.js (WebGL) and Web Audio API. Music track: 'Masagin' by Paniq",
+  "main": "index.js",
+  "scripts": {
+    "dev": "watchify index.js -o app.js -dv",
+    "build": "browserify index.js | uglifyjs -mc > app.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three-world": "^1.0.1",
+    "three": "^0.66.31"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "uglify-js": "^2.4.15",
+    "watchify": "^2.1.1"
+  }
+}
