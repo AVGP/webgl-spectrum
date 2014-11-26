@@ -51,6 +51,8 @@ xhr.responseType = 'arraybuffer';
 xhr.open('GET', 'track.ogg', true);
 xhr.onload = function() {
   context.decodeAudioData(this.response, function(buffer) {
+    var loadingIndicator = document.querySelector("h1");
+    loadingIndicator.parentNode.removeChild(loadingIndicator);
     source.connect(analyser);
     analyser.connect(context.destination);
     source.buffer = buffer;
